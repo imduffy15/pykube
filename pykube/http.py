@@ -96,7 +96,7 @@ class KubernetesHTTPAdapter(requests.adapters.HTTPAdapter):
                     jsonpath_installed,
                 ]
                 if not all(dependencies):
-                    raise ImportError("missing dependencies for GCP support (try pip install pykube_ng[gcp]")
+                    raise ImportError("missing dependencies for GCP support (try pip install pykube-ng[gcp]")
                 auth_config = auth_provider.get("config", {})
                 if "cmd-path" in auth_config:
                     output = subprocess.check_output(
